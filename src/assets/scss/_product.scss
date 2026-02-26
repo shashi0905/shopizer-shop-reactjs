@@ -4448,3 +4448,29 @@
     }
   }
 }
+/* Dynamic badge styles */
+.product-img-badges span {
+  &.badge-new {
+    background-color: #9b59b6 !important;
+  }
+  
+  &.badge-bestseller {
+    background-color: #ff9800 !important;
+  }
+  
+  &.badge-sale {
+    background-color: #e91e63 !important;
+  }
+  
+  &.badge-limited {
+    background-color: #f44336 !important;
+  }
+  
+  &.badge-featured {
+    background-color: #2196f3 !important;
+  }
+  
+  &.badge-trending {
+    background-color: #ff5722 !important;
+  }
+}

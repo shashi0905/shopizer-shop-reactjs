@@ -45,17 +45,19 @@ const ProductGridSingleTwo = ({
               
 
             </Link>
-            {/* {
-              product.discount || product.new ? (
-                <div className="product-img-badges">
-                  {product.discount ? (
-                    <span className="pink">-{product.discount}%</span>
-                  ) : ("")}
-                  {product.new ? <span className="purple">New</span> : ""}
-                </div>
-              ) : ("")
-            } */}
-
+            {product.badges && product.badges.length > 0 && (
+              <div className="product-img-badges">
+                {product.badges.map((badge, index) => (
+                  <span 
+                    key={index} 
+                    className={`badge-${badge.code}`}
+                    style={{ backgroundColor: badge.color }}
+                  >
+                    {badge.code === 'sale' && badge.value ? `-${badge.value}%` : badge.label}
+                  </span>
+                ))}
+              </div>
+            )}
             <div className="product-action-2">
               {/* {product.affiliateLink ? (
                 <a
