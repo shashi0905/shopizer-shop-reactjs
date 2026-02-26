@@ -135,34 +135,11 @@ const Category = ({ setCategoryID, isLoading, strings, location, defaultStore, c
         getManufacturers(categoryid)
     }
     const getManufacturers = async (categoryid) => {
-        let action = constant.ACTION.CATEGORY + categoryid + '/' + constant.ACTION.MANUFACTURERS + '?store=' + defaultStore + '&lang=' + currentLanguageCode
-        try {
-            let response = await WebService.get(action);
-            //console.log(JSON.stringify(response));
-            if (response) {
-                setManufacture(response.sort())
-            }
-        } catch (error) {
-        }
+        // Endpoint doesn't exist
         getVariants(categoryid)
     }
     const getVariants = async (categoryid) => {
-        let action = constant.ACTION.CATEGORY + categoryid + '/' + constant.ACTION.VARIANTS + '?store=' + defaultStore + '&lang=' + currentLanguageCode;
-        try {
-            let response = await WebService.get(action);
-            // console.log(response);
-            if (response) {
-                response.forEach(variant => {
-                    if (variant.code === 'color') {
-                        setColor(variant.options);
-                    } else if (variant.code === "size") {
-                        setSize(variant.options.reverse());
-                    }
-                });
-
-            }
-        } catch (error) {
-        }
+        // Endpoint doesn't exist
     }
     return (
         <Fragment>
