@@ -77,7 +77,7 @@ const ProductImageGallery = ({ product }) => {
           <img
             src="https://via.placeholder.com/500x500?text=No+Image"
             className="img-fluid"
-            alt="No product image"
+            alt="Product placeholder"
           />
         </div>
       </div>
